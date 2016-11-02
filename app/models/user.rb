@@ -7,7 +7,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
     has_secure_password
     
-    validates :password, length: { minimum: 6 }
+    validates :password, length: { minimum: 6 }, allow_blank: true
     
     def self.digest(token)
         Digest::SHA1.hexdigest(token.to_s)
