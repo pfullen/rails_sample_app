@@ -219,22 +219,38 @@ input, textarea, select, .uneditable-input {
 
 .microposts {
   list-style: none;
-  margin: 10px 0 0 0;
+  padding: 0;
+  float: right;
+  margin-right: 275px;
 
   li {
+    
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+    
+    
   }
+  
+  
 }
 .content {
   display: block;
+  margin-left: 60px;
+  img{
+    display: block;
+    padding: 5px 0;
+  }
 }
 .timestamp {
   color: lightgray;
+  display: block;
+  margin-left: 60px;
 }
 .gravatar {
+  
   float: left;
   margin-right: 10px;
+  margin-top: 5px;
 }
 aside {
   textarea {
@@ -243,9 +259,21 @@ aside {
   }
 }
 
+span.picture {
+  margin-top: 10px;
+  input {
+  border: 0;
+    
+  }
+  }
+
+
+
 
 img {
   width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .jumbotron {
@@ -259,4 +287,59 @@ height: 500px;
 #logo {
   float:left;
   margin-left: 5px;
+}
+
+.user_info {
+ 
+  padding-right: 20px;  
+}
+
+.micropost_form{
+  
+  
+  
+}
+
+.btn {
+  
+  width: 100px;
+}
+
+section {
+  
+}
+
+.user_info {
+ 
+}
+aside {
+  margin-left: 5px;
+  section {
+    padding: 10px 0;
+    border-top: 1px solid lightgray;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+    }
+  }
+}
+.col-md-4 {
+  height:100%;
+  
+}
+
+.pagination {
+  
+  margin: 8px;
 }
