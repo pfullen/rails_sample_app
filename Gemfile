@@ -8,7 +8,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 gem 'bootstrap-sass', '3.2.0.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,9 +29,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker',  '~> 1.4.2'
-gem 'carrierwave', '0.11.2'
+gem 'carrierwave', '0.10.0'
 gem 'mini_magick', ' 3.8.0'
-gem 'fog', ' 1.38.0'
+gem 'fog',  '1.26.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 
@@ -74,5 +74,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg',  '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  
+  gem 'puma', '~> 3.0'
 end
