@@ -65,7 +65,7 @@ Rails.application.configure do
    host = 'pfj-rails-sampleapp.herokuapp.com'
    config.action_mailer.default_url_options = {host: host}
    ActionMailer::Base.stmp_settings, = {
-     :address               => 'stmp.sendgrid.net',
+     :address               => 'smtp.sendgrid.net',
      :port                  => '587',
      :user_name             => ENV['SENDGRID_USERNAME'],
      :password              => ENV['SENDGRID_PASSWORD'],
