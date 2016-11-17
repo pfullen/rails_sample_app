@@ -21,7 +21,7 @@ module SessionsHelper
         log_in user
         @current_user = user
       end
-    end
+   end
   end
 
   def current_user?(user)
