@@ -80,9 +80,9 @@ class User < ActiveRecord::Base
 
   # Defines a proto-feed.
   # See "Following users" for the full implementation.
-  #def feed
-    # following_ids = following.map(&:id)
-    # SQL needs following_ids to be string => following_ids.join(',')!
+  def feed
+     following_ids = following.map(&:id)
+     SQL needs following_ids to be string => following_ids.join(',')!
     # rails has following_ids by default
     # Micropost.where("user_id IN (?) OR user_id = (?)", following_ids, id)
    # following_ids = "SELECT followed_id FROM relationships
@@ -90,7 +90,12 @@ class User < ActiveRecord::Base
     # Micropost.where("user_id IN (#{following_ids})
       #              OR user_id = :user_id", user_id: id)
   #end
-
+  Def feed
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids})
+                    OR user_id = :user_id", user_id: id)
+  end
   # Follows a user.
   #def follow(other_user)
    # active_relationships.create(followed_id: other_user.id)
