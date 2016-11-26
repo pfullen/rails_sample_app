@@ -17,6 +17,8 @@ html {
 
 body {
   padding-top: 60px;
+  width: 100%;
+  margin: auto 0;
 }
 
 section {
@@ -80,6 +82,41 @@ p {
   }
 }
 
+header img {
+  float: left;
+}
+
+ .navbar-inverse  {
+   background-color: darkred;
+   height: 120px;
+   display: inline;
+   
+ }
+
+.container {
+  width: 85%;
+}
+
+.container img {
+  margin: 10px;
+  
+}
+
+.container .jumbotron
+{
+  margin:auto 0;
+  width: 100%;
+  
+}
+.title {
+  margin: auto 0;
+}
+
+.title img  {
+width: 250px;
+margin-left: 250px; 
+  
+}
 /* footer */
 
 footer {
@@ -122,6 +159,8 @@ footer {
 /* sidebar */
 
 aside {
+  padding-top: 20px;
+  margin-left: 50px;
   section {
     padding: 10px 0;
     border-top: 1px solid lightgray;
@@ -313,7 +352,8 @@ section {
  
 }
 aside {
-  margin-left: 5px;
+  margin-left: 150px;
+  width: 50px;
   section {
     padding: 10px 0;
     border-top: 1px solid lightgray;
@@ -337,6 +377,12 @@ aside {
 .col-md-4 {
   height:100%;
   
+}
+
+.navbar-nav > li > a {
+  padding-top: 50px;
+  margin-right: -10px;
+  font-size: 20px;
 }
 
 .pagination {

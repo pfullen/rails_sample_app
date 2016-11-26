@@ -11,9 +11,13 @@
       <%= render 'shared/stats' %>
       <% if @users.any? %>
         <div class="user_avatars">
+            <ul>
           <% @users.each do |user| %>
-            <%= link_to user %>
+          <li>
+            <%= link_to user.name %>
+            </li>
           <% end %>
+          </ul>
         </div>
       <% end %>
     </section>

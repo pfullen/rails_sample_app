@@ -18,15 +18,14 @@
         </div>
         <% else %>
  <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
+    <h1>Welcome to the Deacon App</h1>
     <p>
-      This is the home page for the 
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
+      This is the home page for the Deacons of the Diocese of Venice
+      
     </p>
-
+<div class = "title" >  <%= link_to image_tag("page_logo.png",alt: "Diocese of Venice"), id: "logo" %> </div>
     <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails-logo.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
+  
 <% end %>
