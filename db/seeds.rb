@@ -9,6 +9,9 @@
 #Users
 User.create!(name: 'Peter J. Fullen',
              email: 'peter@fullencpa.com',
+             cell_phone: '404-931-8079',
+             last_name: 'Fullen',
+             first_name: 'Peter',
              password: 'hodie8888',
              password_confirmation: 'hodie8888',
              admin: true,
@@ -16,13 +19,20 @@ User.create!(name: 'Peter J. Fullen',
              activated_at: Time.zone.now)
              
  99.times do |n|
-    name = Faker::Name.name
+     first_name = Faker::Name.first_name
+     last_name = Faker::Name.last_name
+    name = Faker::Name.last_name
     email = "example-#{n+1}@railstutorial.org"
     password = "password"
+    password_confirmation = "password"
+    cell_phone = Faker::PhoneNumber.cell_phone
     User.create!(name: name,
+                 last_name: last_name,
+                 first_name: first_name,
+                 cell_phone: cell_phone,
                  email: email,
                  password: password,
-                 password_confirmation: password,
+                 password_confirmation: password_confirmation,
                  activated: true,
                  activated_at: Time.zone.now)
   end

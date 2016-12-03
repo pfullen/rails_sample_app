@@ -13,12 +13,17 @@
 
 html {
   overflow-y: scroll;
+ height: 100%;
+ width: 100%;
 }
 
 body {
   padding-top: 60px;
   width: 100%;
-  margin: auto 0;
+  margin-bottom: 0;
+  position: relative;
+  min-height: 100%;
+  //dispaly: inline;
 }
 
 section {
@@ -43,19 +48,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 50px;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  
+  
 }
 
 h2 {
-  font-size: .7em;
+  font-size: 1em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #black;
+}
+
+ h1, h3{
+  margin-top: 90px;
+  font-family: allegro ;
 }
 
 p {
@@ -88,13 +100,27 @@ header img {
 
  .navbar-inverse  {
    background-color: darkred;
-   height: 120px;
-   display: inline;
+   height: 150px;
+   display: inline block;
+   font-size: 30px;
+   width: 100%;
    
  }
 
+a {
+  margin-right: 0px;
+  
+}
+
 .container {
-  width: 85%;
+   // display: inline; 
+  //padding-top: 20px;
+  //font: Arial;
+  //margin: auto ;
+//  padding-bottom: 20px;
+
+
+
 }
 
 .container img {
@@ -106,6 +132,7 @@ header img {
 {
   margin:auto 0;
   width: 100%;
+  margin-bottom: 0;
   
 }
 .title {
@@ -120,25 +147,39 @@ margin-left: 250px;
 /* footer */
 
 footer {
+  background: black;
+  width: 100%;
+margin-top: 25px;
+clear: both;
+  }
+  
+.footer {
   bottom: 0;
   position: absolute;
-  margin-top: 45px;
-  padding-top: 5px;
+  background: darkred;
+  padding: 0;
   border-top: 1px solid #eaeaea;;
-  color: #eaeaea;
+  color: white;
   width: 100%;
   a {
-    color: gray;
+    color: white;
     &:hover { 
       color: darkgray;
+    text-decoration: none;
     }
   }  
-  small { 
-    float: left; 
+  p { 
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    
   }
   ul {
     float: right;
     list-style: none;
+    margin-bottom: 0;
+    padding-bottom: 10px;
     li {
       float: left;
       margin-left: 10px;
@@ -160,7 +201,9 @@ footer {
 
 aside {
   padding-top: 20px;
-  margin-left: 50px;
+  margin-left: 0px;
+  width: 250px;
+  
   section {
     padding: 10px 0;
     border-top: 1px solid lightgray;
@@ -181,6 +224,10 @@ aside {
     }
   }
 }
+
+ aside.col-md-4 {
+   width: 400px;
+ }
 
 .gravatar {
   float: left;
@@ -260,7 +307,7 @@ input, textarea, select, .uneditable-input {
   list-style: none;
   padding: 0;
   float: right;
-  margin-right: 275px;
+  margin-right: 200px;
 
   li {
     
@@ -294,8 +341,14 @@ input, textarea, select, .uneditable-input {
 aside {
   textarea {
     height: 100px;
+    width: 200px;
     margin-bottom: 5px;
+    margin-left: 0;
   }
+}
+
+aside {
+  width: 200px;
 }
 
 span.picture {
@@ -320,7 +373,7 @@ img {
   
     font-size: 3em;
   
-height: 500px;
+height: 95%;
 }
 
 #logo {
@@ -341,7 +394,8 @@ height: 500px;
 
 .btn {
   
-  width: 100px;
+  width: auto;
+  margin: auto;
 }
 
 section {
@@ -352,7 +406,7 @@ section {
  
 }
 aside {
-  margin-left: 150px;
+  margin-left: 0px;
   width: 50px;
   section {
     padding: 10px 0;
@@ -381,11 +435,314 @@ aside {
 
 .navbar-nav > li > a {
   padding-top: 50px;
-  margin-right: -10px;
-  font-size: 20px;
+  
+  font-size: 30px;
 }
 
 .pagination {
   
   margin: 8px;
 }
+
+.info {
+  width: 40%;
+  margin: auto;
+  font-size: 25px;
+  clear: both;
+  overflow:hidden;
+  padding: 10px;
+}
+
+.info btn {
+  height: 25px;
+  
+}
+
+.info h1 {
+  margin-top: 50px;
+}
+
+.info input{
+  display: inline;
+}
+ .actions {
+  height: 50px;
+}
+
+input { 
+  margin: 3px;
+  padding: 10px 5px;
+  width: 75%;
+  display: inline;
+  
+}
+  .btn input {
+    padding: 25px;
+  }
+  
+.even {
+    background: #b8d1f3;
+}
+
+.odd {
+    background: #dae5f4;
+}
+
+th {
+  padding-right: 25px;
+  font-size: 20px;
+}
+td {
+
+text-align:left;
+padding: 25px;
+
+}
+
+td a {
+    margin-left: 25px;
+    
+}
+
+table {
+  margin: auto;
+}
+
+label {
+  padding-top: 10px;
+}
+
+.form {
+  margin: auto ;
+  margin-bottom: 50px;
+}
+
+form.form-inline div.control-group { 
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 200px;
+  }
+  
+  form.form.control input {
+  margin-left: 200px;  
+  }
+  
+  .signup {
+    margin-left: 100px;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+form.form-inline div.control-group div.controls {
+  display: inline-block;
+  margin: auto;
+  margin-left: 200px;
+  
+}
+
+.long_form {
+  width: 350px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.short_form {
+  width: 50px;
+  margin-bottom: 50px;
+}
+
+.short_form2 {
+  width: 90px;
+  margin-bottom: 50px;
+  }
+  
+  input, label {
+   
+    font-size: 20px;
+    margin-left: 25px; 
+    
+  }
+ 
+  
+  label {
+    margin-bottom: 5px;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+  
+  .center_div {
+    margin-top: 150px;
+    border-top: none;
+    padding: 0;
+    border-style: solid;
+    border-width: 5px;
+    background: lightblue;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 100px;
+    padding-left: 0px;
+    padding-bottom: 0;
+  
+  }
+  
+  .form {
+    margin-left: 25px;
+  }
+  
+  input[type="checkbox"] {
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  
+  textarea{
+    height: 150px;
+    width:  250%;
+    margin-left: 30px;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .sign_up_title {
+    border-bottom: solid;
+    border-width: 1px;
+    background: darkred;
+    color: white;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0;
+  }
+  
+    .sign_up_title h1 {
+      margin: 0;
+      padding-top: 25px;
+             }
+             
+    .sign_up_body {
+      padding-top: 25px;
+      padding-left: 50px;
+      margin-bottom: 75px;
+    }
+    
+    .signup.btn {
+      margin-top: 50px;
+      margin-left: 300px; 
+    }
+    
+    .loginbox input[type="checkbox"] {
+      height: 20px;
+      margin-left: 200px;
+      
+    }
+    
+    .loginbox span {
+      font-size: 20px;
+        
+    }
+    
+    .log_in_button {
+      margin-top: 20px;
+      margin-left: 150px;
+      font-size: 25px;
+    }
+    
+    .forgot_password {
+      margin-top: 5px;
+      margin-left: 150px;
+    }
+    
+    .password {
+      
+      margin-bottom: 5px;
+    }
+    
+    .newuser {
+      margin-left: 100px;
+      font-style: Arial;
+      
+    }
+    
+    .header {
+      width: 75%;
+    }
+    
+    .dropdown-menu {
+      color:black;
+    }
+    
+    .micropost input[type="text_area"] {
+      width: 50px;
+    
+    }
+    
+    section .stats {
+     width: 200px;  
+    }
+    
+    input#micropost_picture {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    
+    .container.user_info {
+      margin-left: 50px;
+      
+    }
+    
+    .img_btn {
+      
+      width: 100px;
+    }
+    
+    .picture {
+      
+      
+    }
+    
+    .microposts.col-md-8 {
+      margin-left: 150px;
+    }
+    
+    .microposts.ol {
+      margin-right: 10px;
+    }
+    
+    .users {
+      margin-bottom: 50px;
+    }
+    
+    .home {
+      background: darkred;
+      padding: 10px;
+      width: 50%;
+      margin: auto;
+      margin-top: 50px;
+      border-radius: 10px;
+        a:hover {
+          background: darkred;
+        }
+    }
+    
+    .home img {
+      margin: auto;
+      
+    }
+    
+    .home_btn {
+      font-size: 25px;  
+      margin-bottom: 20px;
+      font-weight: bold;
+      
+         }
+         
+table  {
+  margin-bottom: 150px;
+  
+}
+    
+    

@@ -1,9 +1,13 @@
+<br>
+<br>
 <% if logged_in? %>
     <div class="">
         <aside class = "col-md-4">
             <section class="user_info">
                 <%= render 'shared/user_info' %>
             </section>
+            
+
             <section class="stats">
                 <%= render 'shared/stats' %>
             </section>
@@ -21,10 +25,13 @@
     <h1>Welcome to the Deacon App</h1>
     <p>
       This is the home page for the Deacons of the Diocese of Venice
+    
       
     </p>
-<div class = "title" >  <%= link_to image_tag("page_logo.png",alt: "Diocese of Venice"), id: "logo" %> </div>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<div class = "home title" >  <%= link_to image_tag("page_logo.png",alt: "Diocese of Venice"), id: "logo" %> </div>
+    <br>
+    <br>
+    <%= link_to "Sign up now!", signup_path, class: "home_btn btn btn-large btn-primary" %>
   </div>
 
   

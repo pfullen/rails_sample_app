@@ -1,23 +1,275 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+
+
+
+ <div class="container center_div">
+  <div class= "sign_up_title">
+       
+      <h1 >Sign up</h1>
+      </div>
+      
+      <div class= "sign_up_body">
+    <%= form_for @user, :html => {:class => 'form-inline', :role => 'form'}  do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
+       <div class = "form-group">
+      <%= f.label :user_name %>
       <%= f.text_field :name, class: 'form control' %>
-
+      </div>
+      
+      <div class = "form-group">
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form control' %>
-
+      </div>
+      
+      <br>
+      <div class = "form-group">
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form control' %>
-
+      </div>
+      
+      <div class = "form-group">
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form control' %>
+      </div>
+      <br>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-    <% end %>
+       
+       
+       <br>
+       
+     <div class = "form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form control' %>
   </div>
+
+    <div class = "form-group">
+    <%= f.label :middle_initial %>
+    <%= f.text_field :middle_name, class: 'short_form' %>
+     </div>
+     
+     <div class = "form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form control' %>
+    </div>
+
+    <div class = "form-group">
+    <%= f.label :date_of_birth %>
+    <%= f.text_field :date_of_birth, placeholder: "mm/dd/yyyy", class: 'form control' %>
+    </div>
+     
+    <br>
+    <div class = "form-group">
+    <%= f.label :street_address %>
+    <%= f.text_field :street_address, class: 'long_form' %>
+    </div>
+
+     <div class = "form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city, class: 'form control' %>
+    </div>
+
+    <div class = "form-group">  
+    <%= f.label :state %>
+    <%= f.text_field :state, class: 'short_form' %>
+    </div>
+
+        <div class = "form-group">
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code, class: 'short_form2' %>
 </div>
+<br>
+
+        <div class = "form-group">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: 'form control' %>
+  </div>
+
+        <div class = "form-group">
+    <%= f.label :cell_phone %>
+    <%= f.text_field :cell_phone, class: 'form control' %>
+  </div>
+<br>
+     <div class = "form-group">
+    <%= f.label :wife_name %>
+    <%= f.text_field :wife_name, class: 'form control' %>
+ </div>
+
+    <div class = "form-group">
+    <%= f.label :wife_date_of_birth %>
+    <%= f.text_field :wife_date_of_birth, placeholder: "mm/dd/yyyy", class: 'form control' %>
+ </div>
+
+     <div class = "form-group">
+    <%= f.label :wedding_anniversary %>
+    <%= f.text_field :wedding_anniversary, placeholder: "mm/dd/yyyy", class: 'form control' %>
+</div>
+<br>
+     <div class = "form-group">
+    <%= f.label :diocese_of_ordination %>
+    <%= f.text_field :diocese_of_ordination, class: 'form control' %>
+ </div>
+
+   <div class = "form-group">
+    <%= f.label :ordination_date %>
+    <%= f.text_field :ordination_date, placeholder: "mm/dd/yyyy", class: 'form control' %>
+  </div>
+
+   <div class = "form-group">
+    <%= f.label :diocese_of_incardination %>
+    <%= f.text_field :diocese_of_incardination, class: 'form control' %>
+  </div>
+
+     <div class = "form-group">
+    <%= f.label :incardination_date %>
+    <%= f.text_field :incardination_date, placeholder: "mm/dd/yyyy", class: 'form control' %>
+  </div>
+
+
+    <div class = "form-group">
+    <%= f.label :military_service %>
+    <%= f.check_box :military_service, class: 'form control' %>
+</div>
+
+     <div class = "form-group">
+    <%= f.label :military_branch %>
+    <%= f.text_field :military_branch, class: 'form control' %>
+ </div>
+
+     <div class = "form-group">
+    <%= f.label :military_period %>
+    <%= f.text_field :military_period, class: 'form control' %>
+  </div>
+  
+   <div class = "form-group">
+    <%= f.label :military_years %>
+    <%= f.text_field :military_years, class: 'form control' %>
+</div>
+  
+     <div class = "form-group">
+    <%= f.label :military_rank %>
+    <%= f.text_field :military_rank, class: 'form control' %>
+  </div>
+<br>
+
+   <div class = "form-group">
+    <%= f.label :faculties %>
+    <%= f.check_box :faculties, class: 'form control' %>
+  </div>
+
+     <div class = "form-group">
+    <%= f.label :preaching %>
+    <%= f.check_box :preaching, class: 'form control' %>
+  </div>
+
+     <div class = "form-group">
+    <%= f.label :status  %>
+    <%= f.text_field :status, class: 'form control'  %>
+  </div>
+<br>
+
+     <div class = "form-group">
+    <%= f.label :employer %>
+    <%= f.text_field :employer, class: 'form control' %>
+ </div>
+
+   <div class = "form-group">
+    <%= f.label :employer_address %>
+    <%= f.text_field :employer_address, class: 'long_form' %>
+ </div>
+<br>
+
+    <div class = "form-group">
+    <%= f.label :my_other_address %>
+    <%= f.text_field :secondary_address, class: 'long_form' %>
+ </div>
+
+   <div class = "form-group">
+    <%= f.label :my_other_city %>
+    <%= f.text_field :secondary_city, class: 'form control' %>
+</div>
+
+  
+     <div class = "form-group">
+    <%= f.label :other_state %>
+    <%= f.text_field :secondary_state, class: 'short_form' %>
+    </div>
+
+     <div class = "form-group">
+    <%= f.label :other_zip %>
+    <%= f.text_field :secondary_zip, class: 'short_form2' %>
+    </div>
+
+     <div class = "form-group">
+    <%= f.label :other_phone %>
+    <%= f.text_field :secondary_phone, class: 'form control' %>
+    </div>
+<br>
+    <div class = "form-group">
+    <%= f.label :assignment %>
+    <%= f.text_field :assignment, class: 'form control' %>
+    </div>
+
+     <div class = "form-group">
+    <%= f.label :assignment_location %>
+    <%= f.text_field :assignment_location, class: 'form control' %>
+    </div>
+
+    <div class = "form-group">
+    <%= f.label :assignment_pastor %>
+    <%= f.text_field :assignment_pastor, class: 'form control' %>
+</div>
+<br>
+    <div class = "form-group">
+    <%= f.label :emergency_contact_name %>
+    <%= f.text_field :emergency_contact_name, class: 'form control' %>
+ </div>
+
+     <div class = "form-group">
+    <%= f.label :emergency_contract_phone %>
+    <%= f.text_field :emergency_contract_phone, class: 'form control' %>
+  </div>
+   <br>
+      <div class = "form-group">
+    <%= f.label :highschool %>
+    <%= f.check_box :highschool, class: 'form control' %>
+ </div> 
+
+     <div class = "form-group">
+    <%= f.label :under_graduate %>
+    <%= f.check_box :under_graduate, class: 'form control' %>
+ </div>
+ 
+    <div class = "form-group">
+    <%= f.label :graduate %>
+    <%= f.check_box :graduate, class: 'form control' %>
+  </div>
+  
+   <div class = "form-group">
+    <%= f.label :doctorate %>
+    <%= f.check_box :doctorate, class: 'form control' %>
+  </div>
+        
+     <div class = "form-group">
+    <%= f.label :field_of_study_or_special_skills %>
+    <%= f.text_field :field_of_study, class: 'form control' %>
+   </div>
+  
+  <br>
+   <div class = "form-group">
+     <%= f.text_area :prior_employment_description , placeholder: "Prior employment experience/ certifications ", class: 'area' %>
+  </div>
+      <br> 
+    <div class = "form-group">
+      <%= f.text_area :prior_diaconate_ministry, placeholder: "Prior Diaconate Experience", class: 'area' %>
+    </div>
+         
+         <br>
+         
+       
+
+      <%= f.submit "Create my account", class: "signup btn btn-large btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+

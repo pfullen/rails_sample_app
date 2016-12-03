@@ -10,7 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117232851) do
+ActiveRecord::Schema.define(version: 20161129123122) do
+
+  create_table "infos", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.date     "date_of_birth"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.string   "cell_phone"
+    t.string   "wife_name"
+    t.string   "wife_date_of_birth"
+    t.string   "wedding_anniversary"
+    t.string   "diocese_of_ordination"
+    t.date     "ordination_date"
+    t.string   "diocese_of_incardination"
+    t.date     "incardination_date"
+    t.boolean  "military_service"
+    t.boolean  "faculties"
+    t.boolean  "preaching"
+    t.string   "status"
+    t.string   "employer"
+    t.string   "employer_address"
+    t.string   "secondary_address"
+    t.string   "secondary_city"
+    t.string   "string"
+    t.string   "secondary_state"
+    t.string   "secondary_zip"
+    t.string   "secondary_phone"
+    t.string   "assignment"
+    t.string   "assignment_location"
+    t.string   "assignment_pastor"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_contract_phone"
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_infos_on_user_id"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -35,16 +76,61 @@ ActiveRecord::Schema.define(version: 20161117232851) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.string   "password_digest"
     t.string   "remember_digest"
     t.boolean  "admin"
     t.string   "activation_digest"
-    t.boolean  "activated",         default: false
+    t.boolean  "activated",                    default: false
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.string   "date_of_birth"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.string   "cell_phone"
+    t.string   "wife_name"
+    t.string   "wife_date_of_birth"
+    t.string   "wedding_anniversary"
+    t.string   "diocese_of_ordination"
+    t.string   "ordination_date"
+    t.string   "diocese_of_incardination"
+    t.string   "incardination_date"
+    t.string   "military_service"
+    t.string   "military_branch"
+    t.string   "military_period"
+    t.string   "military_years"
+    t.string   "military_rank"
+    t.string   "faculties"
+    t.string   "preaching"
+    t.string   "status"
+    t.string   "employer"
+    t.string   "employer_address"
+    t.string   "secondary_address"
+    t.string   "secondary_city"
+    t.string   "secondary_state"
+    t.string   "secondary_zip"
+    t.string   "secondary_phone"
+    t.string   "assignment"
+    t.string   "assignment_location"
+    t.string   "assignment_pastor"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_contract_phone"
+    t.string   "highschool"
+    t.string   "under_graduate"
+    t.string   "graduate"
+    t.string   "doctorate"
+    t.string   "field_of_study"
+    t.string   "prior_employment_description"
+    t.string   "prior_diaconate_ministry"
+    t.string   "pictrue"
   end
 
 end

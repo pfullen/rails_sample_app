@@ -1,9 +1,13 @@
-<li>
-        <%= link_to user.name, user %>
+
+<td>        <%=  user.last_name %>  </td>
+<td>         <%=  user.first_name %> </td>
+<td>         <%=  user.email %>   </td>
+ <td>        <%=  user.cell_phone %>  </td>
+ <td>        <%=  user.phone %>  </td>
         
         <% if current_user.admin? && !current_user?(user) %>
-              |  <%= link_to "delete", user, method: :delete,
-                                      data: { confirm: "Delete this user?"} %>
+            <td>  |  <%= link_to "delete", user, method: :delete,
+                                      data: { confirm: "Delete this user?"} %> </td>
         <% end %>
                                       
-    </li>
+    

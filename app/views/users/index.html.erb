@@ -1,10 +1,32 @@
-<% provide(:title, 'All users') %>
-<%= will_paginate %>
-<h1> All users</h1>
 
-<ul class="users">
+
+<h1> Deacons</h1>
+
+
+<table>
+   <%= will_paginate %>
+  <thead>
+    <tr>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Cell phone</th>
+      <th>Email</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
     <% @users.each do |user| %>
-        <%= render user %>
+      <tr class="<%= cycle('even', 'odd') %>">
+        <td><%= user.last_name %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.cell_phone %></td>
+        <td><%= user.email %></td>
+        
+      </tr>
     <% end %>
-    </ul>
-    <%= will_paginate %>
+      
+  </tbody>
+
+</table>
+
