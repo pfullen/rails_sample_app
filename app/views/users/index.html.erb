@@ -7,10 +7,14 @@
    <%= will_paginate %>
   <thead>
     <tr>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Cell phone</th>
+      <th> Pic </th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Cell Phone</th>
       <th>Email</th>
+      <th>Parish</th>
+      <th></th>
+      <th></th>
      
     </tr>
   </thead>
@@ -18,13 +22,22 @@
   <tbody>
     <% @users.each do |user| %>
       <tr class="<%= cycle('even', 'odd') %>">
+              <td><%= image_tag user.picture.url if user.picture? %> </td>
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.cell_phone %></td>
         <td><%= user.email %></td>
+        <td> <%= user.assignment %> </td>
+        
+        
+     
+       <td ><%= link_to 'Posts', user_path(user) %></td>
+      
+        <td> <%= link_to "View_or_Edit", edit_user_path(user) %> </td>
+        <% end %>
         
       </tr>
-    <% end %>
+    
       
   </tbody>
 

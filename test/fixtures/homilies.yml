@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-12-07
+  subject: MyString
+  week: MyString
+  time: MyString
+  cycle: MyString
+  first_reading_book: MyString
+  first_reading_chapter: MyString
+  first_reading_verse: MyString
+  second_reading_book: MyString
+  second_reading_chapter: MyString
+  second_reading_verse: MyString
+  gospel_book: MyString
+  gospel_chapter: MyString
+  gospel_verse: MyString
+  homily_text: MyText
+  user: one
+
+two:
+  date: 2016-12-07
+  subject: MyString
+  week: MyString
+  time: MyString
+  cycle: MyString
+  first_reading_book: MyString
+  first_reading_chapter: MyString
+  first_reading_verse: MyString
+  second_reading_book: MyString
+  second_reading_chapter: MyString
+  second_reading_verse: MyString
+  gospel_book: MyString
+  gospel_chapter: MyString
+  gospel_verse: MyString
+  homily_text: MyText
+  user: two

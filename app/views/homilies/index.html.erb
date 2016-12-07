@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Homilies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Subject</th>
+      <th>Week</th>
+      <th>Time</th>
+      <th>Cycle</th>
+      <th>Gospel</th>
+      
+      
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homilies.each do |homily| %>
+      <tr>
+        <td><%= homily.date %></td>
+        <td><%= homily.subject %></td>
+        <td><%= homily.week %></td>
+        <td><%= homily.time %></td>
+        <td><%= homily.cycle %></td>
+        <td><%= homily.gospel_book %></td>
+        
+        
+        
+        <td><%= link_to 'Show', homily %></td>
+        <td><%= link_to 'Edit', edit_homily_path(homily) %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class = "homily">
+<%= link_to '+ New Homily', new_homily_path %>
+</div>

@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @homily.date %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @homily.subject %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @homily.week %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @homily.time %>
+</p>
+
+<p>
+  <strong>Cycle:</strong>
+  <%= @homily.cycle %>
+</p>
+
+<p>
+  <strong>First reading book:</strong>
+  <%= @homily.first_reading_book %>
+</p>
+
+<p>
+  <strong>First reading chapter:</strong>
+  <%= @homily.first_reading_chapter %>
+</p>
+
+<p>
+  <strong>First reading verse:</strong>
+  <%= @homily.first_reading_verse %>
+</p>
+
+<p>
+  <strong>Second reading book:</strong>
+  <%= @homily.second_reading_book %>
+</p>
+
+<p>
+  <strong>Second reading chapter:</strong>
+  <%= @homily.second_reading_chapter %>
+</p>
+
+<p>
+  <strong>Second reading verse:</strong>
+  <%= @homily.second_reading_verse %>
+</p>
+
+<p>
+  <strong>Gospel book:</strong>
+  <%= @homily.gospel_book %>
+</p>
+
+<p>
+  <strong>Gospel chapter:</strong>
+  <%= @homily.gospel_chapter %>
+</p>
+
+<p>
+  <strong>Gospel verse:</strong>
+  <%= @homily.gospel_verse %>
+</p>
+
+<p>
+  <strong>Homily text:</strong>
+  <%= @homily.homily_text %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @homily.user %>
+</p>
+
+<%= link_to 'Edit', edit_homily_path(@homily) %> |
+<td><%= link_to 'Destroy', homily, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%= link_to 'Back', homilies_path %>

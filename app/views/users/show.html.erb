@@ -1,9 +1,11 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+<div class="row posts">
 <aside class="col-md-4">
     <section class= "user_info">
 <h1>
+     <%= image_tag @user.picture.url if @user.picture? %>
 <%= @user.name %>
+
 </h1>
 </section>
 <section class="stats">
@@ -14,10 +16,12 @@
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
     <h3> Microposts (<%= @user.microposts.count %>) </h3>
+    <%= will_paginate @microposts %>
     <ol class="microposts">
+         
         <%= render @microposts %>
     </ol>
-    <%= will_paginate @microposts %>
+    
     <% end %>
   </div>
 </div>

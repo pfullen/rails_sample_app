@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   
-    <div class=" header container">
+    <div class="container">
       <%= link_to image_tag("deacon-logo.gif", alt: "Deacon logo"), id: "logo" %>
     
       
@@ -17,9 +17,11 @@
               </a>
               <ul class = "dropdown-menu">
               <li> <%= link_to "Posts", current_user %> </li>
-              <li> <%= link_to "Profile", edit_info_path(current_user) %> </li>
+              <li> <%= link_to "Profile", edit_user_path(current_user) %> </li>
               <li> <%= link_to "Settings", edit_user_path(current_user) %> </li>
-              <li> <%= link_to "Deacons",   infos_path %> </li>
+                <% if current_user.admin? && !current_user?(@user) %>
+              <li> <%= link_to "Deacons",   users_path %> </li>
+                  <% end %>  
               <li class= "divider"> </li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>

@@ -85,7 +85,7 @@ class AddDetailsToUsers < ActiveRecord::Migration[5.0]
    
     add_column :users, :prior_diaconate_ministry, :string
     
-    add_column :users, :pictrue, :string
+    add_column :users, :picture, :string
    
   end
 end

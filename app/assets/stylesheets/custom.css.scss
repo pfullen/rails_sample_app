@@ -307,7 +307,7 @@ input, textarea, select, .uneditable-input {
   list-style: none;
   padding: 0;
   float: right;
-  margin-right: 200px;
+  margin-right: 500px;
 
   li {
     
@@ -599,7 +599,7 @@ form.form-inline div.control-group div.controls {
   
   textarea{
     height: 150px;
-    width:  250%;
+    width:  100%;
     margin-left: 30px;
     font-size: 20px;
     padding: 10px;
@@ -705,10 +705,12 @@ form.form-inline div.control-group div.controls {
     }
     
     .microposts.col-md-8 {
-      margin-left: 150px;
+      margin-right: 50px;
+      
     }
     
     .microposts.ol {
+      
       margin-right: 10px;
     }
     
@@ -742,7 +744,83 @@ form.form-inline div.control-group div.controls {
          
 table  {
   margin-bottom: 150px;
-  
+  width: 90%;
 }
     
+    .alert-warning {
+      font-size: 25px;
+      margin-top: 150px;
+    }
     
+.dropdown-menu {
+  font-size: 25px;
+  width: 170px;
+}
+
+.dropdown  {
+  
+}
+
+
+.navbar-inverse.navbar-nav.open  a  {
+  background: darkred;
+}
+
+.alert {
+  
+  font-size: 25px;
+  margin-top: 150px;
+  
+  
+}
+
+.text-form  {
+  
+  width:  300px;
+}
+
+
+.area {
+  
+  width: 800px;
+}
+
+.avatar {
+  img {
+  width: 275px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+}
+
+.container {
+  width: 90%;
+  padding-top: 20px;
+}
+
+.homily a {
+  margin-left: 90px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid;
+  background: lightblue;
+}
+
+
+.menu {
+  margin-top: 75px;
+}
+
+.menu a {
+  
+  padding: 10px;
+  width: 50px;
+  font-size: 20px;
+  border: 2px solid;
+  background: lightblue;
+  
+}
+
+.posts {
+  width: 75%;
+}

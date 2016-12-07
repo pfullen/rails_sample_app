@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     
-  resources :infos
+  resources :homilies
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :microposts,      only: [:create, :destroy]
   
+
 end
     
     

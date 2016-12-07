@@ -1,0 +1,97 @@
+<%= form_for(homily) do |f| %>
+  <% if homily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(homily.errors.count, "error") %> prohibited this homily from being saved:</h2>
+
+      <ul>
+      <% homily.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= f.label :week %>
+    <%= f.text_field :week %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.text_field :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cycle %>
+    <%= f.text_field :cycle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_reading_book %>
+    <%= f.text_field :first_reading_book %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_reading_chapter %>
+    <%= f.text_field :first_reading_chapter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_reading_verse %>
+    <%= f.text_field :first_reading_verse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_reading_book %>
+    <%= f.text_field :second_reading_book %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_reading_chapter %>
+    <%= f.text_field :second_reading_chapter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_reading_verse %>
+    <%= f.text_field :second_reading_verse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gospel_book %>
+    <%= f.text_field :gospel_book %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gospel_chapter %>
+    <%= f.text_field :gospel_chapter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gospel_verse %>
+    <%= f.text_field :gospel_verse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :homily_text %>
+    <%= f.text_area :homily_text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! homily, :id, :date, :subject, :week, :time, :cycle, :first_reading_book, :first_reading_chapter, :first_reading_verse, :second_reading_book, :second_reading_chapter, :second_reading_verse, :gospel_book, :gospel_chapter, :gospel_verse, :homily_text, :user_id, :created_at, :updated_at
+json.url homily_url(homily, format: :json)

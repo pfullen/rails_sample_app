@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InfoTest < ActiveSupport::TestCase
+class HomilyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
